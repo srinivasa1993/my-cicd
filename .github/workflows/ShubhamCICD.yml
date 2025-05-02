@@ -74,7 +74,7 @@ jobs:
         path: target/*.jar 
 
   sonar_scan:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: build_project
     steps:
     - uses: actions/checkout@v4
