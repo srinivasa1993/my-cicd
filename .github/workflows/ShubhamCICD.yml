@@ -121,5 +121,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: adijaiswal/bankapp:latest
+        tags: shubhszone/bankapp:latest
         file: ./Dockerfile
