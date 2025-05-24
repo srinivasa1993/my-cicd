@@ -6,7 +6,7 @@ on:
 
 jobs:
   compile:
-    runs-on: my-vm
+    runs-on: personal-host
     steps:
     - name: git checkout
       uses: actions/checkout@v4
@@ -21,7 +21,7 @@ jobs:
     - name: build with maven
       run: mvn compile
   security-check:
-    runs-on: my-vm
+    runs-on: personal-host
     needs: compile
     steps:
     - name: chechout code
@@ -44,7 +44,7 @@ jobs:
     - name: code scan gitleaks
       run: gitleaks detect source . -r gitleaks-report.json -f json
   test:
-     runs-on: my-vm
+     runs-on: personal-host
      needs: security-check
      steps:
      - name: checkout code
