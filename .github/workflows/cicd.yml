@@ -48,7 +48,7 @@ jobs:
           sudo apt-get install -y gitleaks
 
       - name: Gitleaks Code Scan
-        run: gitleaks detect --source . --report-path gitleaks-report.json --format json  # fixed flags
+        run: gitleaks detect --source . --report-path gitleaks-report.json -f json  # fixed flags
 
   test:
     runs-on: ubuntu-latest
